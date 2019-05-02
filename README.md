@@ -6,3 +6,5 @@ Console.ForegroundColor = ConsoleColor.Yellow;
             Console.BackgroundColor = ConsoleColor.Blue;           		            Console.WriteLine("\nPlease clone this project so that each person can work on the same thing individually");
 
             Console.ReadLine();
+
+	    //Our group
