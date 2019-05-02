@@ -1,6 +1,6 @@
 # Group-Coding-Project
 
-=======
+=======================
 
 Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\nWelcome to IN510 The group Coding Project");
