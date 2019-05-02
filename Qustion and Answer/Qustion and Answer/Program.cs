@@ -55,6 +55,20 @@ namespace Qustion_and_Answer
                 }
 
             }
+
+
+        //Kevin code those
+       
+            for (int z = 1; z < 10; z++) {
+                for (int s = 1; s <= z; s++) {
+                    Console.Write(s + "*" + z + "=" + z * s + " ");
+                    if (z == s) {
+                        Console.Write("\n");
+                    }
+                }
+            }
+            Console.ReadKey();
+        
         } //Faizel: Added a comment for no reason whatsoever
 
     }
