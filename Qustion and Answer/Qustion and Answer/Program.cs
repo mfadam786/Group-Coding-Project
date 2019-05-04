@@ -68,23 +68,17 @@ namespace Qustion_and_Answer
                 }
             }
             Console.ReadKey();
-        //Bernies Section
-        
+            //Bernies Section
 
+            string userage, hair;
 
+            Console.WriteLine("How old are you?");
+            userage = Console.ReadLine();
 
+            Console.WriteLine("What is your hair colour?");
+            hair = Console.ReadLine();
 
-
-
-
-
-
-
-
-
-
-
-
+            Console.ReadLine();
 
 
             //
