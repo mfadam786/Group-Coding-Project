@@ -68,7 +68,39 @@ namespace Qustion_and_Answer
                 }
             }
             Console.ReadKey();
+        //Bernies Section
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //
+            //Georgettes Section
+
+
+
+
+
+
+
+
+
+
+
+            //
         } //Faizel: Added a comment for no reason whatsoever
 
     }
