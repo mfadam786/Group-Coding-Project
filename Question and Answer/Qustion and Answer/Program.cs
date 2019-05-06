@@ -70,15 +70,29 @@ namespace Qustion_and_Answer
             Console.ReadKey();
             //Bernies Section
 
-            string userage, hair;
+            string name, temp;
+            int DOB, userage, height, height2;
 
-            Console.WriteLine("How old are you?");
-            userage = Console.ReadLine();
+            Console.WriteLine("What is your name?");
+            name = Console.ReadLine();
 
-            Console.WriteLine("What is your hair colour?");
-            hair = Console.ReadLine();
+            Console.WriteLine("What year were you born?");        //Split method
+            temp = Console.ReadLine();
+            DOB = Convert.ToInt32(temp);
 
-            Console.ReadLine();
+            Console.WriteLine("What is your height in cm");
+            temp = Console.ReadLine();
+            height = Convert.ToInt32(temp);
+
+            Console.WriteLine("Please enter your age");
+            temp = Console.ReadLine();
+            userage = Convert.ToInt32(temp);
+
+            Console.WriteLine("How tall are you in cm?");
+            temp = Console.ReadLine();
+            height2 = Convert.ToInt32(temp);
+
+            Console.ReadKey();
 
 
             //
