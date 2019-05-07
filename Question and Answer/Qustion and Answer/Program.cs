@@ -68,17 +68,31 @@ namespace Qustion_and_Answer
             }
 
 
-        //Kevin code those
+            //Kevin code those
        
-            for (int z = 1; z < 10; z++) {
-                for (int s = 1; s <= z; s++) {
-                    Console.Write(s + "*" + z + "=" + z * s + " ");
-                    if (z == s) {
-                        Console.Write("\n");
-                    }
-                }
-            }
-            Console.ReadKey();
+            string position = "";
+            string achievement = "";
+            string company = "";
+            string time = "";
+            string environment = "";
+
+            Console.WriteLine("Where did you hear about the position?");
+            position = Console.ReadLine();
+
+            Console.WriteLine("What is your greatest professional achievement?");
+            achievement = Console.ReadLine();
+
+            Console.WriteLine("Which company did you got the " + achievement + " ?");
+            company = Console.ReadLine();
+
+            Console.WriteLine("How long did you work in " + company + "?");
+            time = Console.ReadLine();
+
+            Console.WriteLine("What kind of work environment did you work last "+ time+" ?");
+            environment = Console.ReadLine();
+
+
+            
             //Bernies Section- To do The “AI” picks up on inconsistent answers 
             //(e.g. if the user answers one question with a yes and later contradicts this, the AI will respond accordingly)
 
