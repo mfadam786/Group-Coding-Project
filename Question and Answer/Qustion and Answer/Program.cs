@@ -11,8 +11,19 @@ namespace Qustion_and_Answer
         static void Main(string[] args)
         {
             //This is where we start coding
-	    
-	    //difine the variables
+            //Need to work out how to compare the year they were born with this year minus their age
+            string temp;
+            int DOB, userage;
+
+            Console.WriteLine("What year were you born?");        //Split method to compare their age to the year they were born
+            temp = Console.ReadLine();
+            DOB = Convert.ToInt32(temp);
+
+            Console.WriteLine("Please enter your age");
+            temp = Console.ReadLine();
+            userage = Convert.ToInt32(temp);
+
+            //difine the variables
             int witch, heads = 0, tails = 0, i;
             //char headsH, tailsT;
 
@@ -68,29 +79,36 @@ namespace Qustion_and_Answer
                 }
             }
             Console.ReadKey();
-            //Bernies Section
+            //Bernies Section- To do The “AI” picks up on inconsistent answers 
+            //(e.g. if the user answers one question with a yes and later contradicts this, the AI will respond accordingly)
 
-            string name, temp;
-            int DOB, userage, height, height2;
+            string name,paper=" ";
+            int height, height2;
+
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
 
             Console.WriteLine("What is your name?");
-            name = Console.ReadLine();
-
-            Console.WriteLine("What year were you born?");        //Split method
-            temp = Console.ReadLine();
-            DOB = Convert.ToInt32(temp);
+            name = Console.ReadLine();         
 
             Console.WriteLine("What is your height in cm");
             temp = Console.ReadLine();
-            height = Convert.ToInt32(temp);
-
-            Console.WriteLine("Please enter your age");
-            temp = Console.ReadLine();
-            userage = Convert.ToInt32(temp);
+            height = Convert.ToInt32(temp);           
 
             Console.WriteLine("How tall are you in cm?");
             temp = Console.ReadLine();
             height2 = Convert.ToInt32(temp);
+
+            if (height!=height2)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine($"Um..excuse me you said you were {height} ");
+            }
+
+            Console.WriteLine("Do you read the newspaper?");
+            paper = Console.ReadLine();
+            paper = paper.ToUpper();
+
+
 
             Console.ReadKey();
 
