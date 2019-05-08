@@ -10,7 +10,7 @@ namespace Qustion_and_Answer
     class Program
     {
         static void Main(string[] args)
-        {
+        {/*
             /////////////////FAIZEL: created this never ending do while loop///////////////////////////
             int count = 1, max = 10;
 
@@ -75,12 +75,12 @@ namespace Qustion_and_Answer
             Console.WriteLine($"heads has been fliped = {heads} times. Tails tails has been fliped = {tails} times.");
             Console.ReadLine();
 
-            */
+            /*
          //Faizel: added this part
 
 
             
-            /*
+            
             
                Stopwatch stopWatch = new Stopwatch();
                stopWatch.Start();
@@ -108,71 +108,85 @@ namespace Qustion_and_Answer
                    ts.Milliseconds / 10);
                Console.WriteLine("RunTime " + elapsedTime);
                stopWatch.Stop();
-               Console.ReadLine();
-               
-            /*
-               //Kevin code those
-
-               string position = "";
-               string achievement = "";
-               string company = "";
-               string time = "";
-               string environment = "";
-
-               Console.WriteLine("Where did you hear about the position?");
-               position = Console.ReadLine();
-
-               Console.WriteLine("What is your greatest professional achievement?");
-               achievement = Console.ReadLine();
-
-               Console.WriteLine("Which company did you got the " + achievement + " ?");
-               company = Console.ReadLine();
-
-               Console.WriteLine("How long did you work in " + company + "?");
-               time = Console.ReadLine();
-
-               Console.WriteLine("What kind of work environment did you work last "+ time+" ?");
-               environment = Console.ReadLine();
+            
+            Console.ReadLine();*/
 
 
+            //Kevin code those
 
-               //Bernies Section- To do The “AI” picks up on inconsistent answers 
-               //(e.g. if the user answers one question with a yes and later contradicts this, the AI will respond accordingly)
+            string position = "";
+            string achievement = "";
+            string company = "";
+            string time = "";
+            string environment = "";
 
-               string name,paper=" ";
-               int height, height2;
+            Console.WriteLine("Where did you hear about the position?");
+            position = Console.ReadLine();
 
-               Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("What is your greatest professional achievement?");
+            achievement = Console.ReadLine();
 
-               Console.WriteLine("What is your name?");
-               name = Console.ReadLine();         
+            Console.WriteLine("Which company did you got the " + achievement + " ?");
+            company = Console.ReadLine();
 
-               Console.WriteLine("What is your height in cm");
-               temp = Console.ReadLine();
-               height = Convert.ToInt32(temp);           
+            Console.WriteLine("How long did you work in " + company + "?");
+            time = Console.ReadLine();
 
-               Console.WriteLine("How tall are you in cm?");
-               temp = Console.ReadLine();
-               height2 = Convert.ToInt32(temp);
-
-               if (height!=height2)
-               {
-                   Console.ForegroundColor = ConsoleColor.DarkRed;
-                   Console.WriteLine($"Um..excuse me you said you were {height} ");
-               }
-
-               Console.WriteLine("Do you read the newspaper?");
-               paper = Console.ReadLine();
-               paper = paper.ToUpper();
+            Console.WriteLine("What kind of work environment did you work last " + time + " ?");
+            environment = Console.ReadLine();
 
 
 
-               Console.ReadKey();
+            //Bernies Section- To do The “AI” picks up on inconsistent answers 
+            //(e.g. if the user answers one question with a yes and later contradicts this, the AI will respond accordingly)
 
-               */
+            string name, attend = " ";
+            
+
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+
+            Console.WriteLine("What is your name?");
+            name = Console.ReadLine();
+
+            Console.WriteLine("Do you attend all of you classes ");
+            attend = Console.ReadLine();
+            attend = attend.ToLower();
+
+            if (attend == "Y")
+            {
+                Console.WriteLine("Does this help you grades?");
+            }
+            else
+            {
+                Console.WriteLine("Why is this?");
+                Console.WriteLine("\n[1] Too little information");
+                Console.WriteLine("\n[2] Too any commitments");
+                Console.WriteLine("\n[3] Other");
+                int user = Convert.ToInt32(Console.ReadLine());
+
+                switch (user)
+                {
+                    case 1:
+                        Console.WriteLine("That sucks");
+                        break;
+                    case 2:
+                        Console.WriteLine("You should make mmore time for yourself");
+                        break;
+                    case 3:
+                        Console.WriteLine("Please specify:");
+                        string specify = Console.ReadLine();
+                        break;
+                }
+            }
+
+
+
+            Console.ReadLine();
+
+
             //
             //Georgettes Section
-//Job Questions
+            //Job Questions
             Console.Write("What is your current Job?");
             Console.ReadLine();
 
@@ -190,7 +204,7 @@ namespace Qustion_and_Answer
 
             //*interacting questions*
             Console.Write("What is the hilight of your carrer?");
-            hilight = Console.ReadLine();
+            string hilight = Console.ReadLine();
 
             Console.Write($"What made the hilight {hilight} so memrable?");
             Console.ReadLine();
@@ -199,12 +213,12 @@ namespace Qustion_and_Answer
 
             //*interacting questions*
             Console.Write("What is your hightest qualification?");
-            highQal = Console.ReadLine();
+            string highQal = Console.ReadLine();
 
             Console.Write($"Did {highQal} prepare you for your current carreer?");
             Console.ReadLine();
 
-//Qusetions that depend on prev answer
+            //Qusetions that depend on prev answer
             Console.Write("Do you have kids?: ");
             string kids = Console.ReadLine();
             if (kids == "yes")
@@ -246,8 +260,9 @@ namespace Qustion_and_Answer
 
 
 
-            //
-        } //Faizel: Added a comment for no reason whatsoever
+                //
+            } //Faizel: Added a comment for no reason whatsoever
 
+        }
     }
 }
