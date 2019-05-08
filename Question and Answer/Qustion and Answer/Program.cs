@@ -10,7 +10,31 @@ namespace Qustion_and_Answer
     class Program
     {
         static void Main(string[] args)
-        {/*
+        {
+            /////////////////FAIZEL: created this never ending do while loop///////////////////////////
+            int count = 1, max = 10;
+
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("hello");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("HI");
+
+                if (max - count == 3)
+                {
+                    max = max * 10;
+                }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(count);
+
+                count++;
+
+            } while (count < max);
+
+            Console.ReadLine();
+            ///////////////////////////////////////////////////////////////////////////////////////
+
             //This is where we start coding
             //Need to work out how to compare the year they were born with this year minus their age
             string temp;
@@ -55,27 +79,7 @@ namespace Qustion_and_Answer
          //Faizel: added this part
 
 
-            int count = 1, max = 10;
-
-            do
-            {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("hello");
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("HI");
-
-                if (max - count == 3)
-                {
-                    max = max * 10;
-                }
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(count);
-                
-                count++;
-
-            } while (count < max);
-
-            Console.ReadLine();
+            
             /*
             
                Stopwatch stopWatch = new Stopwatch();
