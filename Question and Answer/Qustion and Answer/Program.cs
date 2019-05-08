@@ -168,7 +168,37 @@ namespace Qustion_and_Answer
                */
             //
             //Georgettes Section
+//Job Questions
+            Console.Write("What is your current Job?");
+            Console.ReadLine();
 
+            Console.Write("How long have you been working in your current job?");
+            Console.ReadLine();
+
+            Console.Write("Bigest learning point in your carrer?");
+            Console.ReadLine();
+
+            Console.Write("What do you enjoy about your job?");
+            Console.ReadLine();
+
+            Console.Write("What are your goals?");
+            Console.ReadLine();
+
+            //*interacting questions*
+            Console.Write("What is the hilight of your carrer?");
+            hilight = Console.ReadLine();
+
+            Console.Write($"What made the hilight {hilight} so memrable?");
+            Console.ReadLine();
+
+            //Previous Study Questions
+
+            //*interacting questions*
+            Console.Write("What is your hightest qualification?");
+            highQal = Console.ReadLine();
+
+            Console.Write($"Did {highQal} prepare you for your current carreer?");
+            Console.ReadLine();
 
 
 
