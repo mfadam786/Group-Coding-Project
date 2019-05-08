@@ -21,7 +21,7 @@ namespace Qustion_and_Answer
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("HI");
 
-                if (max - count == 3)
+                if (max - count == 3)ed3.
                 {
                     max = max * 10;
                 }
@@ -120,7 +120,6 @@ namespace Qustion_and_Answer
             string time = "";
             string environment = "";
 
-<<<<<<< HEAD
             Console.WriteLine("Where did you hear about the position?");
             position = Console.ReadLine();
 
@@ -129,7 +128,7 @@ namespace Qustion_and_Answer
 
             Console.WriteLine("Which company did you got the " + achievement + " ?");
             company = Console.ReadLine();
-=======
+            
                 do
                  {
                 Console.WriteLine("How long did you work in " + company + "?");
@@ -143,7 +142,6 @@ namespace Qustion_and_Answer
                 answer = Console.ReadLine();
                   }
                   while (answer != "yes");
->>>>>>> ce1bd5f36f0f85bfac23d2c6981c3cdd3af39959
 
             Console.WriteLine("How long did you work in " + company + "?");
             time = Console.ReadLine();
