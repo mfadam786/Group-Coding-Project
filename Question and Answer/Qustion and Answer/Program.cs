@@ -161,7 +161,41 @@ namespace Qustion_and_Answer
             Console.Write($"Did {highQal} prepare you for your current carreer?");
             Console.ReadLine();
 
+//Qusetions that depend on prev answer
+            Console.Write("Do you have kids?: ");
+            string kids = Console.ReadLine();
+            if (kids == "yes")
+            {
+                Console.Write("Dose it have a large impact on your time managemnet?: ");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.Write("Do you have any pets?: ");
+                Console.ReadLine();
+            }
 
+            Console.Write("Did you have a gap year (ir two)?: ");
+            string gapYear = Console.ReadLine();
+            if (gapYear == "yes")
+            {
+                Console.Write("Did you work?");
+                string work = Console.ReadLine();
+                if (work == "yes")
+                {
+                    Console.Write("Did that lead to your current job?: ");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.Write("Did the Gap year benifit you?: ");
+                    Console.ReadLine();
+                }
+            }
+            else
+            {
+                Console.Write("If your were to go back would you take a gap year?: ");
+                Console.ReadLine();
 
 
 
