@@ -128,7 +128,7 @@ namespace Qustion_and_Answer
 
             Console.WriteLine("Which company did you got the " + achievement + " ?");
             company = Console.ReadLine();
-            
+
                 do
                  {
                 Console.WriteLine("How long did you work in " + company + "?");
@@ -142,12 +142,6 @@ namespace Qustion_and_Answer
                 answer = Console.ReadLine();
                   }
                   while (answer != "yes");
-
-            Console.WriteLine("How long did you work in " + company + "?");
-            time = Console.ReadLine();
-
-            Console.WriteLine("What kind of work environment did you work last " + time + " ?");
-            environment = Console.ReadLine();
 
 
 
