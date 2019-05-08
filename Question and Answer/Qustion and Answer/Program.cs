@@ -10,7 +10,7 @@ namespace Qustion_and_Answer
     class Program
     {
         static void Main(string[] args)
-        {/*
+        {
             /////////////////FAIZEL: created this never ending do while loop///////////////////////////
             int count = 1, max = 10;
 
@@ -75,7 +75,7 @@ namespace Qustion_and_Answer
             Console.WriteLine($"heads has been fliped = {heads} times. Tails tails has been fliped = {tails} times.");
             Console.ReadLine();
 
-            /*
+            
          //Faizel: added this part
 
 
@@ -120,6 +120,7 @@ namespace Qustion_and_Answer
             string time = "";
             string environment = "";
 
+<<<<<<< HEAD
             Console.WriteLine("Where did you hear about the position?");
             position = Console.ReadLine();
 
@@ -128,6 +129,21 @@ namespace Qustion_and_Answer
 
             Console.WriteLine("Which company did you got the " + achievement + " ?");
             company = Console.ReadLine();
+=======
+                do
+                 {
+                Console.WriteLine("How long did you work in " + company + "?");
+                time = Console.ReadLine();
+
+                Console.WriteLine("What kind of work environment did you work last " + time + " ?");
+                environment = Console.ReadLine();
+
+
+                Console.WriteLine("So you worked at " + company + " for " + time + " right?");
+                answer = Console.ReadLine();
+                  }
+                  while (answer != "yes");
+>>>>>>> ce1bd5f36f0f85bfac23d2c6981c3cdd3af39959
 
             Console.WriteLine("How long did you work in " + company + "?");
             time = Console.ReadLine();
@@ -221,7 +237,8 @@ namespace Qustion_and_Answer
             //Qusetions that depend on prev answer
             Console.Write("Do you have kids?: ");
             string kids = Console.ReadLine();
-            if (kids == "yes")
+            kids = kids.ToLower();
+	    if (kids == "yes")
             {
                 Console.Write("Dose it have a large impact on your time managemnet?: ");
                 Console.ReadLine();
@@ -234,10 +251,12 @@ namespace Qustion_and_Answer
 
             Console.Write("Did you have a gap year (ir two)?: ");
             string gapYear = Console.ReadLine();
-            if (gapYear == "yes")
+            gapYear = gapYear.ToLower();
+	    if (gapYear == "yes")
             {
                 Console.Write("Did you work?");
                 string work = Console.ReadLine();
+		work = work.ToLower();
                 if (work == "yes")
                 {
                     Console.Write("Did that lead to your current job?: ");
