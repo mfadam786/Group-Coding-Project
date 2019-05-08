@@ -207,7 +207,8 @@ namespace Qustion_and_Answer
 //Qusetions that depend on prev answer
             Console.Write("Do you have kids?: ");
             string kids = Console.ReadLine();
-            if (kids == "yes")
+            kids = kids.ToLower();
+	    if (kids == "yes")
             {
                 Console.Write("Dose it have a large impact on your time managemnet?: ");
                 Console.ReadLine();
@@ -220,10 +221,12 @@ namespace Qustion_and_Answer
 
             Console.Write("Did you have a gap year (ir two)?: ");
             string gapYear = Console.ReadLine();
-            if (gapYear == "yes")
+            gapYear = gapYear.ToLower();
+	    if (gapYear == "yes")
             {
                 Console.Write("Did you work?");
                 string work = Console.ReadLine();
+		work = work.ToLower();
                 if (work == "yes")
                 {
                     Console.Write("Did that lead to your current job?: ");
