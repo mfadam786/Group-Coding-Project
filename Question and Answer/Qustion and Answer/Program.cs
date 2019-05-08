@@ -125,14 +125,19 @@ namespace Qustion_and_Answer
                Console.WriteLine("What is your greatest professional achievement?");
                achievement = Console.ReadLine();
 
-               Console.WriteLine("Which company did you got the " + achievement + " ?");
-               company = Console.ReadLine();
+                do
+                 {
+                Console.WriteLine("How long did you work in " + company + "?");
+                time = Console.ReadLine();
 
-               Console.WriteLine("How long did you work in " + company + "?");
-               time = Console.ReadLine();
+                Console.WriteLine("What kind of work environment did you work last " + time + " ?");
+                environment = Console.ReadLine();
 
-               Console.WriteLine("What kind of work environment did you work last "+ time+" ?");
-               environment = Console.ReadLine();
+
+                Console.WriteLine("So you worked at " + company + " for " + time + " right?");
+                answer = Console.ReadLine();
+                  }
+                  while (answer != "yes");
 
 
 
