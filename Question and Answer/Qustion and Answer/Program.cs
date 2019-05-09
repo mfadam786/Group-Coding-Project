@@ -399,6 +399,19 @@ namespace Qustion_and_Answer
             } while (count < max);
 
             Console.ReadLine();
+                            /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
+                            ///
+                            Console.WriteLine("Hello, I am an AI program. I am a teacher. What is you name?");
+                            name = Console.ReadLine();
+
+                            char attendance = ' ';
+                            Console.WriteLine("Do you attend all of you classes? Y/N");
+                            temp = Console.ReadLine();
+                            attendance = Convert.ToChar(temp);
+=======
+                            Console.ReadLine();*/
+                /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
+
         }
     }
 }
