@@ -23,8 +23,18 @@ namespace Qustion_and_Answer
 
                 //This is where we start coding
                 //Need to work out how to compare the year they were born with this year minus their age
-                string temp;
+                string temp, name;
                 int DOB, userage;
+
+
+                Console.WriteLine("Hello, I am an AI program. I am a teacher. What is you name?");
+                name = Console.ReadLine();
+
+                char attendance = ' ';
+                Console.WriteLine("Do you attend all of you classes? Y/N");
+                temp = Console.ReadLine();
+                attendance = Convert.ToChar(temp);
+                Console.ReadLine();
 
                 Console.WriteLine("What year were you born?");        //Split method to compare their age to the year they were born
                 temp = Console.ReadLine();
@@ -98,7 +108,7 @@ namespace Qustion_and_Answer
                 //Bernies Section- To do The “AI” picks up on inconsistent answers 
                 //(e.g. if the user answers one question with a yes and later contradicts this, the AI will respond accordingly)
 
-                string name, attend = " ";
+                string attend = " ";
 
 
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
@@ -332,7 +342,10 @@ namespace Qustion_and_Answer
 
             Console.ReadLine();
 
-
+                            /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
+                            ///
+                           
+                /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
 
         }
     }
