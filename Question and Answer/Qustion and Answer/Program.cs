@@ -22,7 +22,7 @@ namespace Qustion_and_Answer
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write(" HI ");
 
-                if (max - count == 3)
+                if (max - count == 3)ed3.
                 {
                     max = max * 10;
                 }
@@ -76,67 +76,128 @@ namespace Qustion_and_Answer
             Console.WriteLine($"heads has been fliped = {heads} times. Tails tails has been fliped = {tails} times.");
             Console.ReadLine();
 
+<<<<<<< HEAD
             
          
                //Kevin code those
-
-               string position = "";
-               string achievement = "";
-               string company = "";
-               string time = "";
-               string environment = "";
-
-               Console.WriteLine("Where did you hear about the position?");
-               position = Console.ReadLine();
-
-               Console.WriteLine("What is your greatest professional achievement?");
-               achievement = Console.ReadLine();
-
-               Console.WriteLine("Which company did you got the " + achievement + " ?");
-               company = Console.ReadLine();
-
-               Console.WriteLine("How long did you work in " + company + "?");
-               time = Console.ReadLine();
-
-               Console.WriteLine("What kind of work environment did you work last "+ time+" ?");
-               environment = Console.ReadLine();
+=======
+            
+         //Faizel: added this part
 
 
+            
+            
+            
+               Stopwatch stopWatch = new Stopwatch();
+               stopWatch.Start();
+               Thread.Sleep(100000);
 
-               //Bernies Section- To do The “AI” picks up on inconsistent answers 
-               //(e.g. if the user answers one question with a yes and later contradicts this, the AI will respond accordingly)
+               TimeSpan checkTime = stopWatch.Elapsed;
+               //checkTime.Minutes.Equals(01);
 
-               string name,paper=" ";
-               int height, height2;
 
-               Console.ForegroundColor = ConsoleColor.DarkCyan;
+               //checkTime.ToString() == string.Format("{0:00}:{1:00}:{2:00}.{3:00}", checkTime.Hours, checkTime.Minutes, checkTime.Seconds, checkTime.Milliseconds / )
 
-               Console.WriteLine("What is your name?");
-               name = Console.ReadLine();         
-
-               Console.WriteLine("What is your height in cm");
-               temp = Console.ReadLine();
-               height = Convert.ToInt32(temp);           
-
-               Console.WriteLine("How tall are you in cm?");
-               temp = Console.ReadLine();
-               height2 = Convert.ToInt32(temp);
-
-               if (height!=height2)
+               if (checkTime.Hours.Equals(00) && checkTime.Minutes.Equals(00) && checkTime.Seconds.Equals(30) && checkTime.Milliseconds.Equals(00))
                {
-                   Console.ForegroundColor = ConsoleColor.DarkRed;
-                   Console.WriteLine($"Um..excuse me you said you were {height} ");
+                   Console.ForegroundColor = ConsoleColor.Red;
+                   Console.WriteLine("Well, thak you {name}, but we have almost reached the end of our interview ");
                }
 
-               Console.WriteLine("Do you read the newspaper?");
-               paper = Console.ReadLine();
-               paper = paper.ToUpper();
+
+
+               TimeSpan ts = stopWatch.Elapsed;// Get the elapsed time as a TimeSpan value.
+
+               // Format and display the TimeSpan value.
+               string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+                   ts.Hours, ts.Minutes, ts.Seconds,
+                   ts.Milliseconds / 10);
+               Console.WriteLine("RunTime " + elapsedTime);
+               stopWatch.Stop();
+            
+            Console.ReadLine();*/
+
+
+            //Kevin code those
+
+            string position = "";
+            string achievement = "";
+            string company = "";
+            string time = "";
+            string environment = "";
+
+            Console.WriteLine("Where did you hear about the position?");
+            position = Console.ReadLine();
+
+            Console.WriteLine("What is your greatest professional achievement?");
+            achievement = Console.ReadLine();
+
+            Console.WriteLine("Which company did you got the " + achievement + " ?");
+            company = Console.ReadLine();
+
+                do
+                 {
+                Console.WriteLine("How long did you work in " + company + "?");
+                time = Console.ReadLine();
+
+                Console.WriteLine("What kind of work environment did you work last " + time + " ?");
+                environment = Console.ReadLine();
+
+
+                Console.WriteLine("So you worked at " + company + " for " + time + " right?");
+                answer = Console.ReadLine();
+                  }
+                  while (answer != "yes");
 
 
 
-               Console.ReadKey();
+            //Bernies Section- To do The “AI” picks up on inconsistent answers 
+            //(e.g. if the user answers one question with a yes and later contradicts this, the AI will respond accordingly)
 
-               
+            string name, attend = " ";
+            
+
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+
+            Console.WriteLine("What is your name?");
+            name = Console.ReadLine();
+
+            Console.WriteLine("Do you attend all of you classes ");
+            attend = Console.ReadLine();
+            attend = attend.ToLower();
+
+            if (attend == "Y")
+            {
+                Console.WriteLine("Does this help you grades?");
+            }
+            else
+            {
+                Console.WriteLine("Why is this?");
+                Console.WriteLine("\n[1] Too little information");
+                Console.WriteLine("\n[2] Too any commitments");
+                Console.WriteLine("\n[3] Other");
+                int user = Convert.ToInt32(Console.ReadLine());
+
+                switch (user)
+                {
+                    case 1:
+                        Console.WriteLine("That sucks");
+                        break;
+                    case 2:
+                        Console.WriteLine("You should make mmore time for yourself");
+                        break;
+                    case 3:
+                        Console.WriteLine("Please specify:");
+                        string specify = Console.ReadLine();
+                        break;
+                }
+            }
+
+
+
+            Console.ReadLine();             
+
+
             //
             //Georgettes Section
             //Job Questions
@@ -163,6 +224,8 @@ namespace Qustion_and_Answer
             Console.ReadLine();
 
             //Previous Study Questions
+	    Console.Write("How many Years did you spend doing tertiary study?: ");
+            Console.ReadLine();
 
             //*interacting questions*
             Console.Write("What is your hightest qualification?");
@@ -171,22 +234,66 @@ namespace Qustion_and_Answer
             Console.Write($"Did {highQal} prepare you for your current carreer?");
             Console.ReadLine();
 
+
             */
 
             /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
+            //Qusetions that depend on prev answer
+	    Console.Write("Do you have any Learning Disablities?: ");
+            string learnDis = Console.ReadLine();
+            learnDis = learnDis.ToLower();
+            if (learnDis == "yes")
+            {
+                Console.Write("Did this impact your study?: ");
+                Console.ReadLine();
+
+                Console.Write("Did this help with your empathy towards students?: ");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.Write("Do you feel you are still able to empathise with students with learning disablities?: ");
+                Console.ReadLine();
+            }
             
-            string name = "MF";
-            int hours, mins, seconds, milliseconds;
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            Thread.Sleep(15000);
+	    Console.Write("Do you have kids?: ");
+            string kids = Console.ReadLine();
+            kids = kids.ToLower();
+	    if (kids == "yes")
+            {
+                Console.Write("Dose it have a large impact on your time managemnet?: ");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.Write("Do you have any pets?: ");
+                Console.ReadLine();
+            }
 
-            TimeSpan checkTime = stopWatch.Elapsed;
+            Console.Write("Did you have a gap year (ir two)?: ");
+            string gapYear = Console.ReadLine();
+            gapYear = gapYear.ToLower();
+	    if (gapYear == "yes")
+            {
+                Console.Write("Did you work?");
+                string work = Console.ReadLine();
+		work = work.ToLower();
+                if (work == "yes")
+                {
+                    Console.Write("Did that lead to your current job?: ");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.Write("Did the Gap year benifit you?: ");
+                    Console.ReadLine();
+                }
+            }
+            else
+            {
+                Console.Write("If your were to go back would you take a gap year?: ");
+                Console.ReadLine();
 
-            hours = checkTime.Hours;
-            mins = checkTime.Minutes;
-            seconds = checkTime.Seconds;
-            milliseconds = checkTime.Milliseconds;
 
             if (checkTime.Hours.Equals(hours) && checkTime.Minutes.Equals(mins) && checkTime.Seconds.Equals(seconds) && checkTime.Milliseconds.Equals(milliseconds))
             {
@@ -196,23 +303,6 @@ namespace Qustion_and_Answer
 
             Console.ReadLine();
 
-            //string checkElapsed = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", checkTime.Hours, checkTime.Minutes, checkTime.Seconds, checkTime.Milliseconds / 10);
-            
-            stopWatch.Start();
-            Thread.Sleep(10000);
-
-            TimeSpan ts = stopWatch.Elapsed;// Get the elapsed time as a TimeSpan value.
-            stopWatch.Stop();
-            
-            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-                ts.Hours, ts.Minutes, ts.Seconds,
-                ts.Milliseconds / 10);// Format and display the TimeSpan value.
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("\n\nRunTime : ");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write(elapsedTime);            
-            Console.ReadLine();
 
     /*
             string positive_Words, unknown_Words, negative_Words;
@@ -291,5 +381,10 @@ namespace Qustion_and_Answer
             /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
         }
 
+             
+            }
+
+
+        }
     }
 }
