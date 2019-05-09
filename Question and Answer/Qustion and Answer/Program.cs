@@ -11,7 +11,9 @@ namespace Qustion_and_Answer
     class Program
     {
         static void Main(string[] args)
-        {/*
+        {
+            string answer;
+
             /////////////////FAIZEL: created this never ending do while loop///////////////////////////
             int count = 1, max = 10;
 
@@ -22,7 +24,7 @@ namespace Qustion_and_Answer
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write(" HI ");
 
-                if (max - count == 3)ed3.
+                if (max - count == 3)
                 {
                     max = max * 10;
                 }
@@ -35,7 +37,7 @@ namespace Qustion_and_Answer
 
             Console.ReadLine();
             ///////////////////////////////////////////////////////////////////////////////////////
-            /*
+            
             //This is where we start coding
             //Need to work out how to compare the year they were born with this year minus their age
             string temp;
@@ -76,47 +78,6 @@ namespace Qustion_and_Answer
             Console.WriteLine($"heads has been fliped = {heads} times. Tails tails has been fliped = {tails} times.");
             Console.ReadLine();
 
-<<<<<<< HEAD
-            
-         
-               //Kevin code those
-=======
-            
-         //Faizel: added this part
-
-
-            
-            
-            
-               Stopwatch stopWatch = new Stopwatch();
-               stopWatch.Start();
-               Thread.Sleep(100000);
-
-               TimeSpan checkTime = stopWatch.Elapsed;
-               //checkTime.Minutes.Equals(01);
-
-
-               //checkTime.ToString() == string.Format("{0:00}:{1:00}:{2:00}.{3:00}", checkTime.Hours, checkTime.Minutes, checkTime.Seconds, checkTime.Milliseconds / )
-
-               if (checkTime.Hours.Equals(00) && checkTime.Minutes.Equals(00) && checkTime.Seconds.Equals(30) && checkTime.Milliseconds.Equals(00))
-               {
-                   Console.ForegroundColor = ConsoleColor.Red;
-                   Console.WriteLine("Well, thak you {name}, but we have almost reached the end of our interview ");
-               }
-
-
-
-               TimeSpan ts = stopWatch.Elapsed;// Get the elapsed time as a TimeSpan value.
-
-               // Format and display the TimeSpan value.
-               string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-                   ts.Hours, ts.Minutes, ts.Seconds,
-                   ts.Milliseconds / 10);
-               Console.WriteLine("RunTime " + elapsedTime);
-               stopWatch.Stop();
-            
-            Console.ReadLine();*/
-
 
             //Kevin code those
 
@@ -135,8 +96,8 @@ namespace Qustion_and_Answer
             Console.WriteLine("Which company did you got the " + achievement + " ?");
             company = Console.ReadLine();
 
-                do
-                 {
+            do
+            {
                 Console.WriteLine("How long did you work in " + company + "?");
                 time = Console.ReadLine();
 
@@ -146,8 +107,8 @@ namespace Qustion_and_Answer
 
                 Console.WriteLine("So you worked at " + company + " for " + time + " right?");
                 answer = Console.ReadLine();
-                  }
-                  while (answer != "yes");
+            }
+            while (answer != "yes");
 
 
 
@@ -155,7 +116,7 @@ namespace Qustion_and_Answer
             //(e.g. if the user answers one question with a yes and later contradicts this, the AI will respond accordingly)
 
             string name, attend = " ";
-            
+
 
             Console.ForegroundColor = ConsoleColor.DarkCyan;
 
@@ -193,12 +154,10 @@ namespace Qustion_and_Answer
                 }
             }
 
+            Console.ReadLine();
 
 
-            Console.ReadLine();             
-
-
-            //
+            
             //Georgettes Section
             //Job Questions
             Console.Write("What is your current Job?");
@@ -224,7 +183,7 @@ namespace Qustion_and_Answer
             Console.ReadLine();
 
             //Previous Study Questions
-	    Console.Write("How many Years did you spend doing tertiary study?: ");
+            Console.Write("How many Years did you spend doing tertiary study?: ");
             Console.ReadLine();
 
             //*interacting questions*
@@ -232,14 +191,10 @@ namespace Qustion_and_Answer
             string highQal = Console.ReadLine();
 
             Console.Write($"Did {highQal} prepare you for your current carreer?");
-            Console.ReadLine();
-
-
-            */
-
-            /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
-            //Qusetions that depend on prev answer
-	    Console.Write("Do you have any Learning Disablities?: ");
+            Console.ReadLine();    
+        
+        //Qusetions that depend on prev answer
+        Console.Write("Do you have any Learning Disablities?: ");
             string learnDis = Console.ReadLine();
             learnDis = learnDis.ToLower();
             if (learnDis == "yes")
@@ -255,11 +210,11 @@ namespace Qustion_and_Answer
                 Console.Write("Do you feel you are still able to empathise with students with learning disablities?: ");
                 Console.ReadLine();
             }
-            
-	    Console.Write("Do you have kids?: ");
+
+            Console.Write("Do you have kids?: ");
             string kids = Console.ReadLine();
             kids = kids.ToLower();
-	    if (kids == "yes")
+            if (kids == "yes")
             {
                 Console.Write("Dose it have a large impact on your time managemnet?: ");
                 Console.ReadLine();
@@ -273,11 +228,12 @@ namespace Qustion_and_Answer
             Console.Write("Did you have a gap year (ir two)?: ");
             string gapYear = Console.ReadLine();
             gapYear = gapYear.ToLower();
-	    if (gapYear == "yes")
+
+            if (gapYear == "yes")
             {
                 Console.Write("Did you work?");
                 string work = Console.ReadLine();
-		work = work.ToLower();
+                work = work.ToLower();
                 if (work == "yes")
                 {
                     Console.Write("Did that lead to your current job?: ");
@@ -289,102 +245,89 @@ namespace Qustion_and_Answer
                     Console.ReadLine();
                 }
             }
+
             else
             {
                 Console.Write("If your were to go back would you take a gap year?: ");
-                Console.ReadLine();
-
-
-            if (checkTime.Hours.Equals(hours) && checkTime.Minutes.Equals(mins) && checkTime.Seconds.Equals(seconds) && checkTime.Milliseconds.Equals(milliseconds))
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Well, thak you {name}, but we have almost reached the end of our interview, just 2 more questions");
+                Console.ReadLine();                
             }
 
-            Console.ReadLine();
-
-
-    /*
-            string positive_Words, unknown_Words, negative_Words;
-            int countP = 0, countN = 0, countU = 0;
-
-            StreamReader positive = new StreamReader(@"H:\Group-Coding-Project\Question and Answer\Positive.txt");
-            positive_Words = positive.ReadLine().ToUpper();
-            positive.Close();
-
-
-            StreamReader negative = new StreamReader(@"H:\Group-Coding-Project\Question and Answer\Negative.txt");
-            negative_Words = negative.ReadLine().ToUpper();
-            negative.Close();
-
-
-            StreamReader unknown = new StreamReader(@"H:\Group-Coding-Project\Question and Answer\Unknown.txt"); 
-            unknown_Words = unknown.ReadLine().ToUpper();
-            unknown.Close();            
-
-            string[] positive_Check = positive_Words.Split(',');
-            string[] unknown_Check = unknown_Words.Split(',');
-            string[] negative_Check = negative_Words.Split(',');
-
-            string temp = Console.ReadLine().ToUpper();
-
-            foreach (string yes in positive_Check)
-            {
-                if (temp == yes)
-                {                    
-                    countP++;
-                }
-
-                //Console.ForegroundColor = ConsoleColor.Magenta;
-                //Console.WriteLine(yes);
-            }  
-
-            temp = Console.ReadLine().ToUpper();
-
-            foreach (string maybe in unknown_Check)
-            {
-                if (temp == maybe)
-                {
-                    countU++;
-                }
-            }
-
-            temp = Console.ReadLine().ToUpper();
-
-            foreach (string no in negative_Check)
-            {
-                if (temp == no)
-                {
-                    countN++;
-                }
-            }
-
-
-            if (countP > 0)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("That is positive");
-            }
-
-            if (countU > 0)
-            {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("That is unknown");
-            }
-
-            if (countN > 0)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("That is negative");
-            }
-            Console.ReadLine();*/
             /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
-        }
+            /*
+                        string positive_Words, unknown_Words, negative_Words;
+                        int countP = 0, countN = 0, countU = 0;
 
-             
-            }
+                        StreamReader positive = new StreamReader(@"H:\Group-Coding-Project\Question and Answer\Positive.txt");
+                        positive_Words = positive.ReadLine().ToUpper();
+                        positive.Close();
 
 
+                        StreamReader negative = new StreamReader(@"H:\Group-Coding-Project\Question and Answer\Negative.txt");
+                        negative_Words = negative.ReadLine().ToUpper();
+                        negative.Close();
+
+
+                        StreamReader unknown = new StreamReader(@"H:\Group-Coding-Project\Question and Answer\Unknown.txt"); 
+                        unknown_Words = unknown.ReadLine().ToUpper();
+                        unknown.Close();            
+
+                        string[] positive_Check = positive_Words.Split(',');
+                        string[] unknown_Check = unknown_Words.Split(',');
+                        string[] negative_Check = negative_Words.Split(',');
+
+                        string temp = Console.ReadLine().ToUpper();
+
+                        foreach (string yes in positive_Check)
+                        {
+                            if (temp == yes)
+                            {                    
+                                countP++;
+                            }
+
+                            //Console.ForegroundColor = ConsoleColor.Magenta;
+                            //Console.WriteLine(yes);
+                        }  
+
+                        temp = Console.ReadLine().ToUpper();
+
+                        foreach (string maybe in unknown_Check)
+                        {
+                            if (temp == maybe)
+                            {
+                                countU++;
+                            }
+                        }
+
+                        temp = Console.ReadLine().ToUpper();
+
+                        foreach (string no in negative_Check)
+                        {
+                            if (temp == no)
+                            {
+                                countN++;
+                            }
+                        }
+
+
+                        if (countP > 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("That is positive");
+                        }
+
+                        if (countU > 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("That is unknown");
+                        }
+
+                        if (countN > 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("That is negative");
+                        }
+                        Console.ReadLine();*/
+            /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
         }
     }
 }
