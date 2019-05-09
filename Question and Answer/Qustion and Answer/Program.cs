@@ -4,29 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Diagnostics;
+using System.IO;
 
 namespace Qustion_and_Answer
 {
     class Program
     {
         static void Main(string[] args)
-        {
+        {/*
             /////////////////FAIZEL: created this never ending do while loop///////////////////////////
             int count = 1, max = 10;
 
             do
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("hello");
+                Console.Write(" hello ");
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("HI");
+                Console.Write(" HI ");
 
                 if (max - count == 3)
                 {
                     max = max * 10;
                 }
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(count);
+                Console.Write(count);
 
                 count++;
 
@@ -34,7 +35,7 @@ namespace Qustion_and_Answer
 
             Console.ReadLine();
             ///////////////////////////////////////////////////////////////////////////////////////
-
+            /*
             //This is where we start coding
             //Need to work out how to compare the year they were born with this year minus their age
             string temp;
@@ -75,42 +76,8 @@ namespace Qustion_and_Answer
             Console.WriteLine($"heads has been fliped = {heads} times. Tails tails has been fliped = {tails} times.");
             Console.ReadLine();
 
-            */
-         //Faizel: added this part
-
-
             
-            /*
-            
-               Stopwatch stopWatch = new Stopwatch();
-               stopWatch.Start();
-               Thread.Sleep(100000);
-
-               TimeSpan checkTime = stopWatch.Elapsed;
-               //checkTime.Minutes.Equals(01);
-
-
-               //checkTime.ToString() == string.Format("{0:00}:{1:00}:{2:00}.{3:00}", checkTime.Hours, checkTime.Minutes, checkTime.Seconds, checkTime.Milliseconds / )
-
-               if (checkTime.Hours.Equals(00) && checkTime.Minutes.Equals(00) && checkTime.Seconds.Equals(30) && checkTime.Milliseconds.Equals(00))
-               {
-                   Console.ForegroundColor = ConsoleColor.Red;
-                   Console.WriteLine("Well, thak you {name}, but we have almost reached the end of our interview ");
-               }
-
-
-
-               TimeSpan ts = stopWatch.Elapsed;// Get the elapsed time as a TimeSpan value.
-
-               // Format and display the TimeSpan value.
-               string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-                   ts.Hours, ts.Minutes, ts.Seconds,
-                   ts.Milliseconds / 10);
-               Console.WriteLine("RunTime " + elapsedTime);
-               stopWatch.Stop();
-               Console.ReadLine();
-               
-            /*
+         
                //Kevin code those
 
                string position = "";
@@ -169,17 +136,17 @@ namespace Qustion_and_Answer
 
                Console.ReadKey();
 
-               */
+               
             //
             //Georgettes Section
-//Job Questions
+            //Job Questions
             Console.Write("What is your current Job?");
             Console.ReadLine();
 
             Console.Write("How long have you been working in your current job?");
             Console.ReadLine();
 
-            Console.Write("Bigest learning point in your carrer?");
+            Console.Write("Bigest learning point in your career?");
             Console.ReadLine();
 
             Console.Write("What do you enjoy about your job?");
@@ -190,7 +157,7 @@ namespace Qustion_and_Answer
 
             //*interacting questions*
             Console.Write("What is the hilight of your carrer?");
-            hilight = Console.ReadLine();
+            string hilight = Console.ReadLine();
 
             Console.Write($"What made the hilight {hilight} so memrable?");
             Console.ReadLine();
@@ -199,21 +166,130 @@ namespace Qustion_and_Answer
 
             //*interacting questions*
             Console.Write("What is your hightest qualification?");
-            highQal = Console.ReadLine();
+            string highQal = Console.ReadLine();
 
             Console.Write($"Did {highQal} prepare you for your current carreer?");
             Console.ReadLine();
 
+            */
+
+            /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
+            
+            string name = "MF";
+            int hours, mins, seconds, milliseconds;
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            Thread.Sleep(15000);
+
+            TimeSpan checkTime = stopWatch.Elapsed;
+
+            hours = checkTime.Hours;
+            mins = checkTime.Minutes;
+            seconds = checkTime.Seconds;
+            milliseconds = checkTime.Milliseconds;
+
+            if (checkTime.Hours.Equals(hours) && checkTime.Minutes.Equals(mins) && checkTime.Seconds.Equals(seconds) && checkTime.Milliseconds.Equals(milliseconds))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Well, thak you {name}, but we have almost reached the end of our interview, just 2 more questions");
+            }
+
+            Console.ReadLine();
+
+            //string checkElapsed = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", checkTime.Hours, checkTime.Minutes, checkTime.Seconds, checkTime.Milliseconds / 10);
+            
+            stopWatch.Start();
+            Thread.Sleep(10000);
+
+            TimeSpan ts = stopWatch.Elapsed;// Get the elapsed time as a TimeSpan value.
+            stopWatch.Stop();
+            
+            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+                ts.Hours, ts.Minutes, ts.Seconds,
+                ts.Milliseconds / 10);// Format and display the TimeSpan value.
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("\n\nRunTime : ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(elapsedTime);            
+            Console.ReadLine();
+
+    /*
+            string positive_Words, unknown_Words, negative_Words;
+            int countP = 0, countN = 0, countU = 0;
+
+            StreamReader positive = new StreamReader(@"H:\Group-Coding-Project\Question and Answer\Positive.txt");
+            positive_Words = positive.ReadLine().ToUpper();
+            positive.Close();
 
 
+            StreamReader negative = new StreamReader(@"H:\Group-Coding-Project\Question and Answer\Negative.txt");
+            negative_Words = negative.ReadLine().ToUpper();
+            negative.Close();
 
 
+            StreamReader unknown = new StreamReader(@"H:\Group-Coding-Project\Question and Answer\Unknown.txt"); 
+            unknown_Words = unknown.ReadLine().ToUpper();
+            unknown.Close();            
+
+            string[] positive_Check = positive_Words.Split(',');
+            string[] unknown_Check = unknown_Words.Split(',');
+            string[] negative_Check = negative_Words.Split(',');
+
+            string temp = Console.ReadLine().ToUpper();
+
+            foreach (string yes in positive_Check)
+            {
+                if (temp == yes)
+                {                    
+                    countP++;
+                }
+
+                //Console.ForegroundColor = ConsoleColor.Magenta;
+                //Console.WriteLine(yes);
+            }  
+
+            temp = Console.ReadLine().ToUpper();
+
+            foreach (string maybe in unknown_Check)
+            {
+                if (temp == maybe)
+                {
+                    countU++;
+                }
+            }
+
+            temp = Console.ReadLine().ToUpper();
+
+            foreach (string no in negative_Check)
+            {
+                if (temp == no)
+                {
+                    countN++;
+                }
+            }
 
 
+            if (countP > 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("That is positive");
+            }
 
+            if (countU > 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("That is unknown");
+            }
 
-            //
-        } //Faizel: Added a comment for no reason whatsoever
+            if (countN > 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("That is negative");
+            }
+            Console.ReadLine();*/
+            /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
+        }
 
     }
 }
