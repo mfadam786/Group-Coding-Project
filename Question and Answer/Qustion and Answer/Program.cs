@@ -160,41 +160,39 @@ namespace Qustion_and_Answer
             
             //Georgettes Section
             //Job Questions
-            Console.Write("What is your current Job?");
+            Console.Write("What are you currently Studying?: ");
+            string currentStudy = Console.ReadLine();
+
+            Console.Write($"How long have you been Studying {currentStudy} at Otago Polytech so far?: ");
             Console.ReadLine();
 
-            Console.Write("How long have you been working in your current job?");
+            Console.Write("Bigest learning point in your study so far?: ?");
             Console.ReadLine();
 
-            Console.Write("Bigest learning point in your career?");
-            Console.ReadLine();
-
-            Console.Write("What do you enjoy about your job?");
+            Console.Write("What do you enjoy about studying?: ");
             Console.ReadLine();
 
             Console.Write("What are your goals?");
             Console.ReadLine();
 
             //*interacting questions*
-            Console.Write("What is the hilight of your carrer?");
+            Console.Write("What is the hilight of your study so far?");
             string hilight = Console.ReadLine();
 
             Console.Write($"What made the hilight {hilight} so memrable?");
             Console.ReadLine();
 
             //Previous Study Questions
-            Console.Write("How many Years did you spend doing tertiary study?: ");
-            Console.ReadLine();
 
             //*interacting questions*
             Console.Write("What is your hightest qualification?");
             string highQal = Console.ReadLine();
 
-            Console.Write($"Did {highQal} prepare you for your current carreer?");
+            Console.Write($"Did {highQal} prepare you for your studies in {currentStudy}?: ");
             Console.ReadLine();    
         
         //Qusetions that depend on prev answer
-        Console.Write("Do you have any Learning Disablities?: ");
+        Console.Write("Do you have any Learning Disablities?: yes/no");
             string learnDis = Console.ReadLine();
             learnDis = learnDis.ToLower();
             if (learnDis == "yes")
@@ -202,41 +200,42 @@ namespace Qustion_and_Answer
                 Console.Write("Did this impact your study?: ");
                 Console.ReadLine();
 
-                Console.Write("Did this help with your empathy towards students?: ");
+                Console.Write("Do you have help so you are able to do your best?: ");
                 Console.ReadLine();
             }
             else
             {
-                Console.Write("Do you feel you are still able to empathise with students with learning disablities?: ");
+                Console.Write("Do you know anyone with a Learning Disablitie: ");
                 Console.ReadLine();
             }
 
-            Console.Write("Do you have kids?: ");
+            Console.Write("Do you have kids?: yes/no");
             string kids = Console.ReadLine();
             kids = kids.ToLower();
             if (kids == "yes")
             {
-                Console.Write("Dose it have a large impact on your time managemnet?: ");
+                Console.Write("Dose it have a large impact on your time managemnet while studying?: ");
                 Console.ReadLine();
             }
             else
             {
-                Console.Write("Do you have any pets?: ");
+		    //bernie We could put your hobbie questions here
+                Console.Write("Do you have commitments outside of study?: ");
                 Console.ReadLine();
             }
 
-            Console.Write("Did you have a gap year (ir two)?: ");
+            Console.Write("Did you have a gap year (or multiple)?: yes/no");
             string gapYear = Console.ReadLine();
             gapYear = gapYear.ToLower();
 
             if (gapYear == "yes")
             {
-                Console.Write("Did you work?");
+                Console.Write("Did you work?: yes/no");
                 string work = Console.ReadLine();
                 work = work.ToLower();
                 if (work == "yes")
                 {
-                    Console.Write("Did that lead to your current job?: ");
+                    Console.Write("Did that lead to your current studies?: ");
                     Console.ReadLine();
                 }
                 else
