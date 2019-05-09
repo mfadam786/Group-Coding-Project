@@ -218,6 +218,8 @@ namespace Qustion_and_Answer
             Console.ReadLine();
 
             //Previous Study Questions
+	    Console.Write("How many Years did you spend doing tertiary study?: ");
+            Console.ReadLine();
 
             //*interacting questions*
             Console.Write("What is your hightest qualification?");
@@ -227,7 +229,24 @@ namespace Qustion_and_Answer
             Console.ReadLine();
 
             //Qusetions that depend on prev answer
-            Console.Write("Do you have kids?: ");
+	    Console.Write("Do you have any Learning Disablities?: ");
+            string learnDis = Console.ReadLine();
+            learnDis = learnDis.ToLower();
+            if (learnDis == "yes")
+            {
+                Console.Write("Did this impact your study?: ");
+                Console.ReadLine();
+
+                Console.Write("Did this help with your empathy towards students?: ");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.Write("Do you feel you are still able to empathise with students with learning disablities?: ");
+                Console.ReadLine();
+            }
+            
+	    Console.Write("Do you have kids?: ");
             string kids = Console.ReadLine();
             kids = kids.ToLower();
 	    if (kids == "yes")
