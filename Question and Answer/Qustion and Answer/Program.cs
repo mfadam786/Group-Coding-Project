@@ -12,6 +12,32 @@ namespace Qustion_and_Answer
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Connecting Database...");
+
+            Console.CursorVisible = false;
+            Console.SetCursorPosition(1, 1);
+
+            for (int i = 0; i < 100; i++)
+            {
+                for (int l = 0; l < i; l++)
+                {
+
+                    Console.Write("*");
+
+                }
+
+                Console.Write(i + "/100");
+                Console.SetCursorPosition(1, 1);
+                System.Threading.Thread.Sleep(50);
+
+
+            }
+
+            Console.Clear();
+            Console.Write("Connect successful");
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+
             string answer;
 
             /////////////////FAIZEL: created this never ending do while loop///////////////////////////
@@ -21,7 +47,7 @@ namespace Qustion_and_Answer
 
             do
             {
-              
+
                 string temp, name;
                 int userage;
 
@@ -37,7 +63,7 @@ namespace Qustion_and_Answer
                 string attend = " ";
                 Console.WriteLine($"{name} do you attend all of you classes Y/N");
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                attend = Console.ReadLine();               
+                attend = Console.ReadLine();
                 attend = attend.ToLower();
 
                 if (attend == "y")
@@ -74,7 +100,7 @@ namespace Qustion_and_Answer
                             break;
                     }
                     Console.Clear();
-                }               
+                }
                 Console.WriteLine("Please enter your age");
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 temp = Console.ReadLine();
@@ -98,12 +124,12 @@ namespace Qustion_and_Answer
                 achievement = Console.ReadLine();
 
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("Have you travelled?");       
+                Console.WriteLine("Have you travelled?");
 
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 answer = Console.ReadLine();
                 answer = answer.ToUpper();
-                
+
                 if (answer == "Y")
                 {
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
@@ -357,10 +383,10 @@ namespace Qustion_and_Answer
 
             Console.ReadLine();
 
-                            /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
-                            ///
-                           
-                /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
+            ///
+
+            /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
 
         }
     }
