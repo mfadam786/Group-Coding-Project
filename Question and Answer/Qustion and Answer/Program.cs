@@ -51,30 +51,33 @@ namespace Qustion_and_Answer
                 string temp, name;
                 int userage;
 
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.ForegroundColor = ConsoleColor.White;
 
-                Console.WriteLine("I'm an AI program that wants to learn more about students. Please aswer some questions about your studies ");
+                Console.WriteLine("I'm an AI program that wants to learn more about students. ");
                 Thread.Sleep(1000);
-                Console.WriteLine("It should not take longer than 5 mins to answer all of the questions the I have for you.\r");
-                Thread.Sleep(1000);
+                Console.WriteLine("If you have the time and would like to could you please aswer some questions about your studies? \n");
+                Thread.Sleep(1000);       
                 Console.WriteLine("\nWhat is your name?");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 name = Console.ReadLine();
 
                 string attend = " ";
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine($"{name} do you attend all of you classes Y/N");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 attend = Console.ReadLine();
                 attend = attend.ToLower();
 
                 if (attend == "y")
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine($"Well done on your time managment {name}");
-                    Thread.Sleep(3000);
+                    Thread.Sleep(1000);
+                    Console.Clear();
                 }
                 else
                 {
-                    Console.WriteLine("Why is this?\n ");
+                    Console.WriteLine("Why do you think this is?\n ");
                     Console.WriteLine("Choose option 1, 2 or 3");
                     Thread.Sleep(500);
                     Console.WriteLine("\n[1] I find it hard to follow/remember my schedule\n");
@@ -89,7 +92,7 @@ namespace Qustion_and_Answer
                             Thread.Sleep(3000);
                             break;
                         case 2:
-                            Console.WriteLine("\nYou should make more time for yourself. Try using a calander app to track where you need to be");
+                            Console.WriteLine("\nTo remedy this you should make more time for yourself. Try using a calander app to track where you need to be");
                             Thread.Sleep(3000);
                             break;
                         case 3:
@@ -102,9 +105,8 @@ namespace Qustion_and_Answer
                     Console.Clear();
                 }
                 Console.WriteLine("Please enter your age");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                temp = Console.ReadLine();
-                userage = Convert.ToInt32(temp);
+                Console.ForegroundColor = ConsoleColor.DarkCyan;               
+                userage = Convert.ToInt32(Console.ReadLine());
 
                 string hear = "";
                 string achievement = "";
@@ -113,178 +115,190 @@ namespace Qustion_and_Answer
                 string environment = " ";
                 string personal = " ";
 
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nWhere did you hear about Otago Polytech");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("Where did you hear about Otago Polytech");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 hear = Console.ReadLine();
 
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nWhat is your greatest achievement there?");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("What is your greatest achievement there?");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 achievement = Console.ReadLine();
 
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("Have you travelled?");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nHave you travelled?");
 
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 answer = Console.ReadLine();
                 answer = answer.ToUpper();
 
                 if (answer == "Y")
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nWould you say travelling was good for your personal development? Y/N");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("Would you say travelling was good for your personal development? Y/N");
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     personal = Console.ReadLine();
 
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nHow long have you been at " + location + "?");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("How long have you been at " + location + "?");
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     time = Console.ReadLine();
 
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nWould you say it was a nice environment" + time + " ?");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("Would you say it was a nice environment" + time + " ?");
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     environment = Console.ReadLine();
+                    Console.Clear();
+                    Thread.Sleep(1000);
                 }
-                Console.Clear();
-                Thread.Sleep(1000);
+               
 
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("What are you currently Studying?: ");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nWhat are you currently Studying?: ");
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 string currentStudy = Console.ReadLine();
 
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine($"\nHow long have you been Studying {currentStudy} at Otago Polytech so far?: ");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine($"How long have you been Studying {currentStudy} at Otago Polytech so far?: ");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.ReadLine();
 
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nWhat do you enjoy most about studying?: ");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("What do you enjoy most about studying?: ");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.ReadLine();
 
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nWhat has been the biggest learning point in your studies so far?");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("What has been the biggest learning point in your studies so far?");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.ReadLine();
 
+                Console.WriteLine("Thank you very much, I'll now ask a few more questions if thats alright");
                 Console.Clear();
                 Thread.Sleep(1000);
+                
 
                 //*interacting questions*
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("What is the highlight of your study so far?");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 string highlight = Console.ReadLine();
 
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nWhat are your goals?");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("What are your goals?");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.ReadLine();
 
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine($"\nWhat part of acheving {highlight} did you enjoy the most?");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine($"What made the highlight {highlight} so memorable?");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.ReadLine();
 
                 //Previous Study Questions
 
                 //*interacting questions*
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nWhat is your hightest qualification?");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("What is your hightest qualification?");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 string highQal = Console.ReadLine();
 
+                Console.WriteLine("Thank you very much, I'll now ask a few more questions if thats alright");
+                Console.Clear();
+                Thread.Sleep(1000);
+
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine($"Do you think getting your {highQal} prepared you for your studies in {currentStudy}?: ");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine($"Did {highQal} prepare you for your studies in {currentStudy}?: ");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.ReadLine();
 
-                //Qusetions that depend on prev answer
+                //Questions that depend on prev answer
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nDo you have any Learning Disabilities? Y/N");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("Do you have any Learning Disabilities?: yes/no");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 string learnDis = Console.ReadLine();
                 learnDis = learnDis.ToLower();
 
                 if (learnDis == "yes")
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nDid this impact your study? Y/N ");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("Did this impact your study?: ");
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.ReadLine();
 
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nDo you have help so you are able to do your best? Y/N ");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("Do you have help so you are able to do your best?: ");
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.ReadLine();
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nDo you know anyone with a Learning Disability. Y/N ");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("Do you know anyone with a Learning Disability: ");
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.ReadLine();
                 }
 
+                Console.WriteLine("Thank you very much, I'll now ask a few more questions if thats alright");
+                Console.Clear();
+                Thread.Sleep(1000);
+
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Do you have children? Y/N");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("Do you have children?: Y/N");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 string kids = Console.ReadLine();
                 kids = kids.ToLower();
                 if (kids == "yes")
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nDoes it have a large impact on your time management while studying? Y/N ");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("Does it have a large impact on your time management while studying?: ");
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.ReadLine();
                 }
                 else
                 {
                     //bernie We could put your hobbie questions here
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nDo you have commitments outside of study? Y/N ");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("Do you have commitments outside of study?: ");
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.ReadLine();
                 }
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nDid you have a gap between finishing high school and tertiary study? Y/N ");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("Did you have a gap year or two?: ");
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 string gapYear = Console.ReadLine();
                 gapYear = gapYear.ToLower();
 
                 if (gapYear == "yes")
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nDid you work?");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("Did you work?");
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     string work = Console.ReadLine();
                     work = work.ToLower();
 
                     if (work == "yes")
                     {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("\nDid that lead to your current Study?: ");
                         Console.ForegroundColor = ConsoleColor.DarkCyan;
-                        Console.WriteLine("Did that lead to your current Study?: ");
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.ReadLine();
                     }
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("\nDid the Gap year benefit you?: ");
                         Console.ForegroundColor = ConsoleColor.DarkCyan;
-                        Console.WriteLine("Did the Gap year benefit you?: ");
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.ReadLine();
                     }
                 }
 
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nIf your were to go back would you take a gap year?: ");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    Console.WriteLine("If your were to go back would you take a gap year?: ");
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.ReadLine();
+                    Console.Clear();
                 }
 
                 /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
@@ -365,8 +379,9 @@ namespace Qustion_and_Answer
                 /////////////////////////////////////////////////////Faizel's section//////////////////////////////////////////////////////////////////////////////////
                 ///
                 string again = " ";
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("Thank you very much, the program will now run again");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("\nThank you very much, the answers to your questions are very helpful. If you would like to change any of your answers you " +
+                    "may do so now.");
                 again = Console.ReadLine();
                 again = again.ToLower();
                 Thread.Sleep(1000);
