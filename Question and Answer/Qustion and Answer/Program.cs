@@ -71,12 +71,13 @@ namespace Qustion_and_Answer
                 if (attend == "y")
                 {
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine($"Well done on your time managment {name}");
+                    Console.WriteLine($"\nWell done on your time management {name}");
                     Thread.Sleep(1000);
                     Console.Clear();
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("\nWhy do you think this is?\n ");
                     Thread.Sleep(1000);
                     Console.WriteLine("Choose option 1, 2 or 3");
@@ -86,31 +87,36 @@ namespace Qustion_and_Answer
                     Console.WriteLine("\n[2] I don't enjoy them\n");
                     Thread.Sleep(1000);
                     Console.WriteLine("\n[3] Another Reason\n");
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
                     int user = Convert.ToInt32(Console.ReadLine());
 
                     switch (user)
                     {                        
                         case 1:
+                            Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("A possible solution is...");
                             Thread.Sleep(1000);
                             Console.WriteLine("\nPrinting out your schedule or keep a copy of it on your phone. ");
                             Thread.Sleep(3000);
                             break;
                         case 2:
+                            Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("A possible solution is...");
                             Thread.Sleep(1000);
                             Console.WriteLine("\nCondition yourself by having a yummy treat every class");
                             Thread.Sleep(3000);
                             break;
                         case 3:
+                            Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("\nCould you please specify?\n");
+                            Console.ForegroundColor = ConsoleColor.DarkCyan;
                             string specify = Console.ReadLine();
                             Console.WriteLine("\nThank you, if you don't mind I have a few more questions");
-                            Thread.Sleep(3000);
+                            Thread.Sleep(2000);
                             break;
                     }
                     Console.Clear();
-                }
+                }                
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Please enter your age\n");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;               
@@ -163,33 +169,37 @@ namespace Qustion_and_Answer
                     Thread.Sleep(1000);
                 }
 
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Have you been overseas before?");
                 string checktravel = " ";
                 checktravel = Console.ReadLine();
                 checktravel = checktravel.ToLower();
 
-                if ((checktravel=="y")||(travel != "y"))
+                if ((checktravel !="y")||(travel=="y"))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("\nSorry I thought you said you hadn't travelled. My mistake, I will update my records");
-                    Thread.Sleep(1000);
+                    Thread.Sleep(4000);
                 }
 
-                else if ((checktravel !="y")||(travel=="y"))
-                {
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine("\nSorry I thought you said you hadn't travelled. My mistake, I will update my records");
-                    Thread.Sleep(1000);
-                }
-                
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Thank you very much, I'll now ask a few more questions if thats alright");
+                Console.Clear();
+                Thread.Sleep(1000);
+
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Where do you study?");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                string place = Console.ReadLine();
 
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\nWhat are you currently Studying?: ");
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 string currentStudy = Console.ReadLine();
 
+
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine($"\nHow long have you been Studying {currentStudy} at Otago Polytech so far?: ");
+                Console.WriteLine($"\nHow long have you been Studying {currentStudy} at {place}? ");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.ReadLine();
 
@@ -213,6 +223,9 @@ namespace Qustion_and_Answer
                 Console.WriteLine("What is the highlight of your study so far?");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 string highlight = Console.ReadLine();
+
+                Console.WriteLine("\nThank you, if you don't mind I have a few more questions");
+                Thread.Sleep(3000);
 
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\nWhat are your goals?");
@@ -260,9 +273,19 @@ namespace Qustion_and_Answer
                     Console.ReadLine();
 
                     Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Thank you very much, I'll now ask a few more questions if thats alright");
+                    Console.Clear();
+                    Thread.Sleep(1000);
+
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("\nDo you have help so you are able to do your best? Y/N ");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
                     Console.ReadLine();
+
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Thank you very much, I'll now ask a few more questions if thats alright");
+                    Console.Clear();
+                    Thread.Sleep(1000);
                 }
                 else
                 {
@@ -270,6 +293,8 @@ namespace Qustion_and_Answer
                     Console.WriteLine("\nDo you know anyone with a Learning Disability. Y/N ");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
                     Console.ReadLine();
+
+
                 }
 
                 Console.WriteLine("Thank you very much, I'll now ask a few more questions if thats alright");
