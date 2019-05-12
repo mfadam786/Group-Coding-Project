@@ -48,7 +48,7 @@ namespace Qustion_and_Answer
             do
             {
 
-                string temp, name;
+                string name;
                 int userage;
 
                 Console.ForegroundColor = ConsoleColor.White;
@@ -71,7 +71,7 @@ namespace Qustion_and_Answer
                 if (attend == "y")
                 {
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine($"\nWell done on your time management {name}");
+                    Console.WriteLine($"\nWell done on your time management {name}\n");
                     Thread.Sleep(1000);
                     Console.Clear();
                 }
@@ -79,6 +79,7 @@ namespace Qustion_and_Answer
                 {
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("\nWhy do you think this is?\n ");
+                    
                     Thread.Sleep(1000);
                     Console.WriteLine("Choose option 1, 2 or 3");
                     Thread.Sleep(500);
@@ -88,20 +89,22 @@ namespace Qustion_and_Answer
                     Thread.Sleep(1000);
                     Console.WriteLine("\n[3] Another Reason\n");
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    int user = Convert.ToInt32(Console.ReadLine());
+                    string temp = Console.ReadLine();
+                    int userreason = Convert.ToInt32(temp);
 
-                    switch (user)
+
+                    switch (userreason)
                     {                        
                         case 1:
                             Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine("A possible solution is...");
+                            Console.WriteLine("\nA possible solution is...\n");
                             Thread.Sleep(1000);
                             Console.WriteLine("\nPrinting out your schedule or keep a copy of it on your phone. ");
                             Thread.Sleep(3000);
                             break;
                         case 2:
                             Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine("A possible solution is...");
+                            Console.WriteLine("\nA possible solution is...\n");
                             Thread.Sleep(1000);
                             Console.WriteLine("\nCondition yourself by having a yummy treat every class");
                             Thread.Sleep(3000);
@@ -122,7 +125,53 @@ namespace Qustion_and_Answer
                 Console.ForegroundColor = ConsoleColor.DarkCyan;               
                 userage = Convert.ToInt32(Console.ReadLine());
 
-                string hear = "";
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("What are the best methods you have found for retaining information?\n");               
+                
+                    Console.WriteLine("Choose option 1, 2, 3 or 4");
+                    Thread.Sleep(500);
+                    Console.WriteLine("\n[1] Note taking\n");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("\n[2] Explaining concepts to a classmate\n");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("\n[3] Having concepts explained to me\n");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("\n[4] Flash cards\n");
+                    Thread.Sleep(1000);
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    int user = Convert.ToInt32(Console.ReadLine());
+
+                    switch (user)
+                    {
+                        case 1:
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("There are many different ways people prefer to learn\n");
+                            Console.WriteLine($"\n{name} you may be someone that learns best by reading and writing");
+                            Thread.Sleep(3000);
+                            break;
+
+                        case 2:
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("There are many different ways people prefer to learn\n");
+                            Console.WriteLine($"\n{name} you may be an auditory learner");
+                            Thread.Sleep(3000);
+                            break;
+
+                        case 3:
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("There are many different ways people prefer to learn\n");
+                            Console.WriteLine($"\n{name} you may be an auditory learner\n");
+                            Thread.Sleep(2000);
+                            break;
+
+                        default:
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("There are many different ways people prefer to learn\n");
+                            Console.WriteLine($"\n{name} you may be a kinesthetic learner");
+                            break;
+                    }
+
+                    string hear = "";
                 string achievement = "";
                 string location = "";
                 string time = "";
@@ -170,22 +219,24 @@ namespace Qustion_and_Answer
                 }
 
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("Have you been overseas before?");
+                Console.WriteLine("Have you been overseas before?\n");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 string checktravel = " ";
                 checktravel = Console.ReadLine();
                 checktravel = checktravel.ToLower();
 
-                if ((checktravel !="y")||(travel=="y"))
+                if ((checktravel =="y")||(travel!="y"))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("\nSorry I thought you said you hadn't travelled. My mistake, I will update my records");
-                    Thread.Sleep(4000);
+                    Thread.Sleep(3000);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("\nThank you very much, I'll now ask a few more questions if thats alright");                    
+                    Thread.Sleep(3000);
+                    Console.Clear();
                 }
 
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("Thank you very much, I'll now ask a few more questions if thats alright");
-                Console.Clear();
-                Thread.Sleep(1000);
+                
 
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Where do you study?");
@@ -315,9 +366,7 @@ namespace Qustion_and_Answer
                 }
                 else
                 {
-                    Console.WriteLine("Thank you, I'll now ask a few more questions if thats alright");
-                    Console.Clear();
-                    Thread.Sleep(1000);
+                    Console.WriteLine("Thank you, I'll now ask a few more questions if thats alright");                  
                 }
 
                 //Report inconsistancies
@@ -339,13 +388,13 @@ namespace Qustion_and_Answer
                 if ((hobbies != "y")|| (commitments == "y"))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine("Sorry I thought you said you didn't have any commitments. My mistake, I will update my records");
+                    Console.WriteLine("\nSorry I thought you said you didn't have any commitments. My mistake, I will update my records\n");
                     Thread.Sleep(1000);
                 }
                 else if ((hobbies == "y")||(commitments != "y"))
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine("Sorry I thought you said you didn't have any commitments. My mistake, I will update my records");
+                    Console.WriteLine("\nSorry I thought you said you didn't have any commitments. My mistake, I will update my records\n");
                     Thread.Sleep(1000);
                 }
 
@@ -484,9 +533,10 @@ namespace Qustion_and_Answer
                 ///
                 string again = " ";
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("\nThank you very much, the answers to your questions are very helpful. ");
+                Console.WriteLine("\nThank you very much, the answers to your questions are very helpful.\n");
                 Thread.Sleep(1000);
-                    Console.WriteLine("\nIf you would like to change any of your answers you may do so now.");
+                    Console.WriteLine("\nIf you would like to change any of your answers you may do so now as the program will run again\n");
+                Console.WriteLine("\nalternatively if you have a friend that would be willing to help, ask them to complete the questionaire as well\n");
                 again = Console.ReadLine();
                 again = again.ToLower();
                 Thread.Sleep(1000);
